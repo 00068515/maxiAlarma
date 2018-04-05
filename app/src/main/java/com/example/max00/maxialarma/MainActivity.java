@@ -1,5 +1,6 @@
 package com.example.max00.maxialarma;
 
+import android.content.Context;
 import android.content.Intent;
 import android.provider.AlarmClock;
 import android.provider.ContactsContract;
@@ -20,8 +21,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //variables
     private Spinner horitas;
     private Spinner minutitos;
-    private EditText horas;
-    private EditText minutos;
     private EditText mensaje;
     private Button boton;
     private int Phora;
@@ -50,9 +49,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
 
-        /*instanciacion
-        horas = findViewById(R.id.ET_hours);
-        minutos = findViewById(R.id.ET_minutes);*/
+        //instanciando
         mensaje = findViewById(R.id.ET_mensaje);
         boton = findViewById(R.id.B_allahu);
 
@@ -61,8 +58,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //parse de mierda
-                //Integer hora = Integer.parseInt(horas.getText().toString());
+
                 //implementacion del metodo alarmita
                 alarmita(mensaje.getText().toString(),Phora,Pmin);
             }
@@ -85,13 +81,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = horitas.getSelectedItem().toString();
-        //Toast.makeText(parent.getContext(),text,Toast.LENGTH_SHORT).show();//mostrar mensaje
-        String text2 = minutitos.getSelectedItem().toString();
-        //Toast.makeText(parent.getContext(),text2,Toast.LENGTH_SHORT).show();//mostrar mensaje
+        String text = horitas.getSelectedItem().toString();// obteniendo elemento seleccionado del spinner de horas
+        //Toast.makeText(horitas.getContext(),text,Toast.LENGTH_SHORT).show();//mostrar mensaje
+        String text2 = minutitos.getSelectedItem().toString();// obteniendo el elemento selecciondo del spinner de minutos
+        //Toast.makeText((minutitos.getContext(),text2,Toast.LENGTH_SHORT).show();//mostrar mensaje
 
-        Phora = Integer.parseInt(text);
-        Pmin = Integer.parseInt(text2);
+        Phora = Integer.parseInt(text);//transformando a int
+        Pmin = Integer.parseInt(text2);// transformando a int
     }
 
     @Override
