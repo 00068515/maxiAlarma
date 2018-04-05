@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/IV_Hermana"
+        android:contentDescription="Imagen sobre alarma"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:layout_marginBottom="-150dp"
+        android:layout_marginTop="-150dp"
+        android:src="@drawable/icono"/>
+
+    <TextView
+        android:id="@+id/TV_hermano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horas y minutos"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+
+    <Spinner
+        android:id="@+id/SP_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Hours"
+        android:inputType="time"
+        android:layout_gravity="center"/>
+    <Spinner
+        android:id="@+id/SP_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Minutes"
+        android:inputType="time"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/ET_mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mensaje de alarma"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/B_allahu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="allahu akbar"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
