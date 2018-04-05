@@ -52,9 +52,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         /*instanciacion
         horas = findViewById(R.id.ET_hours);
-        minutos = findViewById(R.id.ET_minutes);
+        minutos = findViewById(R.id.ET_minutes);*/
         mensaje = findViewById(R.id.ET_mensaje);
-        boton = findViewById(R.id.B_allahu);*/
+        boton = findViewById(R.id.B_allahu);
 
 
         //listener boton
@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = horitas.getItemAtPosition(position).toString();
-        Toast.makeText(horitas.getContext(),text,Toast.LENGTH_SHORT).show();//mostrar mensaje
+        //Toast.makeText(parent.getContext(),text,Toast.LENGTH_SHORT).show();//mostrar mensaje
         String text2 = minutitos.getItemAtPosition(position).toString();
-        Toast.makeText(minutitos.getContext(),text2,Toast.LENGTH_SHORT).show();//mostrar mensaje
+        //Toast.makeText(parent.getContext(),text2,Toast.LENGTH_SHORT).show();//mostrar mensaje
 
         Phora = Integer.parseInt(text);
         Pmin = Integer.parseInt(text2);
