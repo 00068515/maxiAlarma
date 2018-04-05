@@ -85,9 +85,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = horitas.getItemAtPosition(position).toString();
+        String text = horitas.getSelectedItem().toString();
         //Toast.makeText(parent.getContext(),text,Toast.LENGTH_SHORT).show();//mostrar mensaje
-        String text2 = minutitos.getItemAtPosition(position).toString();
+        String text2 = minutitos.getSelectedItem().toString();
         //Toast.makeText(parent.getContext(),text2,Toast.LENGTH_SHORT).show();//mostrar mensaje
 
         Phora = Integer.parseInt(text);
